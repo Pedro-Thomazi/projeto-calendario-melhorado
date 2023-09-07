@@ -1,0 +1,52 @@
+.headerCalendar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ccc;
+}
+
+.monthAndYear {
+  display: flex;
+  align-items: center;
+}
+
+.headerCalendar .monthAndYear h3 {
+  font-size: 1rem;
+  margin: 0 5px;
+}
+
+.headerCalendar .nextOrprevious>i {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.calendar table {
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+
+.calendar th, 
+.calendar td {
+  /* border: 1px solid #ccc; */
+  color: #ccc;
+  height: 25px;
+  text-align: center;
+  width: 70px;
+  font-weight: bold;
+  transition: .4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.calendar td:hover {
+  background: #0084ff;
+}
+
+.calendar td.today {
+  background: #0051ff;
+}
+
+.calendar table tbody .prevMonth, .calendar table tbody .nextMonth {
+  color: #777;
+}

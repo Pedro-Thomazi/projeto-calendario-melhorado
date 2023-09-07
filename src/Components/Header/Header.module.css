@@ -1,0 +1,124 @@
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f1f1f;
+    width: 65px;
+    height: 100vh;
+    transition: .4s;
+    z-index: 1000;
+}
+
+.littleCalendar {
+    display: none;
+}
+
+.header i {
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.header i:hover {
+    background: #0084ff;
+}
+
+.btnHamb {
+    position: relative;
+    margin-top: 50px;
+}
+
+.header div div p {
+    position: absolute;
+    font-size: .9rem;
+    background: #3f3f3f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    top: -40px;
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.addEvents:hover p,
+.btnHamb:hover .expand {
+    opacity: 1;
+}
+
+.addEvents {
+    position: relative;
+    margin-top: 30px;
+}
+
+.addEvents p {
+    white-space: nowrap;
+}
+
+.configs {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.configs:hover p {
+    opacity: 1;
+}
+
+/* ---------- Menu aberto ---------- */
+.header.openMenu {
+    width: 300px;
+    align-items: flex-start;
+}
+
+.header.openMenu i {
+    margin-left: 18px;
+}
+
+.header.openMenu p {
+    left: 18px;
+}
+
+.header.openMenu .expand {
+    opacity: 0;
+}
+
+.header.openMenu .btnHamb:hover .toRecall {
+    opacity: 1;
+}
+
+.header.openMenu .addEvents {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.header.openMenu .addEvents i:hover {
+    background: none;
+}
+
+.header.openMenu .addEvents:hover {
+    background: #0084ff;
+    transition: .4s;
+}
+
+.header.openMenu .addEvents p {
+    position: static;
+    opacity: 1;
+    background: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header.openMenu .littleCalendar {
+    display: block;
+    position: absolute;
+    top: 180px;
+    left: 18px;
+    width: 250px;
+}
